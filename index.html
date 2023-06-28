@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workbook: Streamflow</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Javascript/tabSelect.js"></script>
+</head>
+
+<body>
+    <div class="choicesContainer">
+        <div class="choices">
+            <div class="choice selected" id="introduction-tab"><a href="#introduction">Introduction</a></div>
+            <div class="choice" id="map-tab"><a href="#map">Map</a></div>
+            <div class="choice" id="timeframes-tab"><a href="#timeframes">Monitoring Time Frames</a></div>
+            <div class="choice" id="additionalinfo-tab"><a href="#additionalinfo">Additional Information</a></div>
+            <div class="choice" id="datasources-tab"><a href="#datasources">Data Sources</a></div>
+        </div>
+    </div>
+
+    <div id="map-content" class="tab-content">
+        <div class="rowMap" id="row1">
+            <div id="siteLocation">
+                <h2>Site Locations</h2>
+            </div>
+        </div>
+        <div class="rowMap" id="row2">
+            <div id="leftColumn">
+                <h3>Legends</h3>
+                <div id="MonitoredYears">
+                    <h3>Monitored Years</h3>
+                </div>
+                <div id="Organization">
+                    <h3>Organization</h3>
+                </div>
+            </div>
+            <div id="centerColumn">
+                <div class="interactive-map">
+                    <!-- Interactive World Map Goes Here -->
+                </div>
+            </div>
+            <div id="rightColumn">
+                <h3>FILTERS</h3>
+                <div class="columnMap">
+                    <label for="organization-filter">Organization:</label>
+                    <select id="organization-filter">
+                        <!-- Organization Dropdown Filter Box -->
+                    </select>
+                </div>
+                <div class="columnMap">
+                    <label for="state-filter">State:</label>
+                    <select id="state-filter">
+                        <!-- State Dropdown Filter Box -->
+                    </select>
+                </div>
+                <div class="columnMap">
+                    <label for="county-filter">County:</label>
+                    <input type="text" id="county-filter">
+                </div>
+                <div class="columnMap">
+                    <label for="huc8-filter">Huc8 Name:</label>
+                    <select id="huc8-filter">
+                        <!-- Huc8 Dropdown Filter Box -->
+                    </select>
+                </div>
+                <div class="columnMap">
+                    <label for="stage-discharge-filter">Stage/Discharge:</label>
+                    <input type="text" id="stage-discharge-filter">
+                </div>
+                <div class="columnMap">
+                    <label for="frequency-filter">Frequency:</label>
+                    <input type="text" id="frequency-filter">
+                </div>
+                <div class="columnMap">
+                    <label for="status-filter">Status:</label>
+                    <div id="status-filter">
+                        <input type="radio" id="status-all" name="status" value="all" checked>
+                        <label for="status-all">All</label>
+                        <input type="radio" id="status-active" name="status" value="active">
+                        <label for="status-active">Active</label>
+                        <input type="radio" id="status-inactive" name="status" value="inactive">
+                        <label for="status-inactive">Inactive</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rowMap" id="row3">
+            <div class="columnMap">
+                <div class="information">
+                    <strong>Instructions for Use</strong>
+                    <ul>
+                        <li>Selecting a site(s) on the map will highlight all the sites within the subbasin, including
+                            the selected site(s). However, only details on the selected sites will be displayed in both
+                            the Monitoring Time Frames and Additional Information dashboards. Use the Map Toolbar or
+                            Ctrl+select to select more than one site. To reset the view, click anywhere on the map.</li>
+                        <li>The drop-down filters in this dashboard also filter the Monitoring Time Frames and
+                            Additional Information dashboards.</li>
+                        <li>Enable the "<strong>Highlight Selected Items</strong>" tool next to each legend header to
+                            select organizations or a range of monitoring years from the legends. The tool will only
+                            highlight sites on the map. Use Ctrl+select to select more than one Legend item. To reset,
+                            click anywhere on the map.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
