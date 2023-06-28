@@ -77,4 +77,17 @@
     text-align: justify;
 }
 
-.information {}
+.interactive-map svg {
+    border: 1px solid #000;
+}
+
+.country {
+    fill: #ccc;
+    stroke: #333;
+    stroke-width: 0.5px;
+}
+
+.interactive-map svg {
+    width: 100%;
+    height: 100%;
+}
